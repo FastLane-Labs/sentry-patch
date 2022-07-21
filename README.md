@@ -3,7 +3,7 @@ The patch for a validator's existing sentries
 
 To download the sentry patch:
 
- ``git@github.com:Polygon-Fast-Lane/sentry-patch.git``
+ ``git clone git@github.com:Polygon-Fast-Lane/sentry-patch.git``
 
  ``cd sentry-patch``
 
