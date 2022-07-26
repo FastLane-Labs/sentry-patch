@@ -24,6 +24,14 @@ Apply the patch which will make your sentry announce all transactions:
 
 ``git apply /path/to/sentry-patch/announce_only.patch``
 
-And then install Bor as normal:
+Stop Bor:
+
+``sudo service bor stop``
+
+Install Bor as normal:
 
 ``make bor-all``  or ``docker build --tag bor:latest .``
+
+Start Bor:
+
+``sudo service bor start``
