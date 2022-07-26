@@ -1,22 +1,29 @@
 # sentry-patch-download
-The patch for a validator's existing sentries
+This patch is for a validator's existing sentries
 
 To download the sentry patch:
 
- ``git clone git@github.com:Polygon-Fast-Lane/sentry-patch.git``
+ ``git clone https://github.com/Polygon-Fast-Lane/sentry-patch.git``
 
- ``cd sentry-patch``
 
- ``git checkout main``
- 
 
 # sentry-patch-install
-When installing / updating BOR from the default BOR repo:
+If Bor is already installed, navigate to your Bor directory and check out the latest release:
 
-*After* you pull/fetch the new BOR code but *before* you make/build the new BOR file, use this command inside of your *local* BOR directory:
+``cd bor``
 
-After this step: ``git checkout v0.latest.BorVersion``
- 
-Use this command: ``git apply /path/to/sentry-patch/announce_only.patch``   
+``git checkout RELEASE_TAG``
 
-Then continue the update process: ``make bor-all``  or ``docker build --tag bor:latest .``
+where `RELEASE_TAG` is the tag of the release version that you install.
+
+For instance:
+
+``git checkout v0.2.16``
+
+Apply the patch which will make your sentry announce all transactions: 
+
+``git apply /path/to/sentry-patch/announce_only.patch``
+
+And then install Bor as normal:
+
+``make bor-all``  or ``docker build --tag bor:latest .``
