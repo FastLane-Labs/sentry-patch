@@ -3,7 +3,7 @@ This patch is for a validator's existing sentries
 
 To download the sentry patch:
 
- ``git clone https://github.com/Polygon-Fast-Lane/sentry-patch.git``
+ ``git clone https://github.com/FastLane-Labs/sentry-patch.git``
 
 
 
@@ -18,7 +18,7 @@ where `RELEASE_TAG` is the tag of the release version that you install.
 
 For instance:
 
-``git checkout v0.2.16``
+``git checkout v1.0.6``
 
 Apply the patch which will make your sentry announce all transactions: 
 
@@ -30,7 +30,7 @@ Stop Bor:
 
 Install Bor as normal:
 
-``make bor-all``  or ``docker build --tag bor:latest .``
+``make bor``  or ``docker build --tag bor:latest .``
 
 Start Bor:
 
