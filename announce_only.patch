@@ -1,13 +1,13 @@
 diff --git a/eth/handler.go b/eth/handler.go
-index 48bdf8eb1..6f5c6220c 100644
+index 58e5b00db..ae83903d6 100644
 --- a/eth/handler.go
 +++ b/eth/handler.go
-@@ -636,7 +636,7 @@ func (h *handler) BroadcastTransactions(txs types.Transactions) {
- 	for _, tx := range txs {
- 		peers := h.peers.peersWithoutTransaction(tx.Hash())
- 		// Send the tx unconditionally to a subset of our peers
--		numDirect := int(math.Sqrt(float64(len(peers))))
-+		numDirect := int(0)
- 		for _, peer := range peers[:numDirect] {
- 			txset[peer] = append(txset[peer], tx.Hash())
+@@ -653,7 +653,7 @@ func (h *handler) BroadcastTransactions(txs types.Transactions) {
+ 
+ 		var numDirect int
+ 		if tx.Size() <= txMaxBroadcastSize {
+-			numDirect = int(math.Sqrt(float64(len(peers))))
++			numDirect = 0
  		}
+ 		// Send the tx unconditionally to a subset of our peers
+ 		for _, peer := range peers[:numDirect] {
