@@ -1,11 +1,11 @@
 diff --git a/eth/handler.go b/eth/handler.go
-index 1ce792d35..5ca773b8a 100644
+index 58e5b00db..ae83903d6 100644
 --- a/eth/handler.go
 +++ b/eth/handler.go
-@@ -650,7 +650,7 @@ func (h *handler) BroadcastTransactions(txs types.Transactions) {
- 		case tx.Size() > txMaxBroadcastSize:
- 			largeTxs++
- 		default:
+@@ -653,7 +653,7 @@ func (h *handler) BroadcastTransactions(txs types.Transactions) {
+ 
+ 		var numDirect int
+ 		if tx.Size() <= txMaxBroadcastSize {
 -			numDirect = int(math.Sqrt(float64(len(peers))))
 +			numDirect = 0
  		}
